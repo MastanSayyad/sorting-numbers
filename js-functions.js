@@ -1,48 +1,31 @@
 function sortNumbers() {
-    let input = document.getElementById('numberInput').value.trim(); //"5 2 8 1 9 3"
+    let input = document.getElementById('numberInput').value.trim(); // 5 6 7 8 9 -> string
 
-    if(input === ""){
-        alert("Please enter the numbers")
-        return;
-    }
-
-
-    let numbers = input.split(' '); // Convert input string to array of numbers num = ["5", "2", 8 1, 9, 3]
-    let numArray = []; // 5 2 8 1 9 3
+    let numbers = input.split(' '); // Convert input string to array of numbers // [5,6,7,8,9]
+    let numArray = []; // so that i can convert the string into integers
 
     for (let i = 0; i < numbers.length; i++) {
-        numArray.push(parseInt(numbers[i]));
+        numArray.push(parseInt(numbers[i])); //appending one by one 5 6 7 8 9
     }
 
     // Store original numbers
     let original = [...numArray]; // Creates a copy of the array so original order is preserved.
 
-    // Sort using bubble sort
-    let sorted
+    let sortType = document.getElementById('sortType').value;
+    let sorted;  // variable to store sorted values
 
-    let sortType = document.getElementById('sortType').value
-
-    if(sortType === "bubble"){
-        sorted = bubbleSort(numArray);
-    } else if(sortType === "selection"){
-        sorted = selectionSort(numArray);
+    if (sortType === "bubble") {
+        sorted = bubbleSort([...numArray]);
+    } else if (sortType === "quick") {
+        sorted = quickSort([...numArray]);
+    } else if (sortType === "selection") {
+        sorted = selectionSort([...numArray]);
+    } else if (sortType === "insertion") {
+        sorted = insertionSort([...numArray]);
     }
 
-
     // frequency
-    let frequency = {}; // object literal -> key values
-                                         //  num  frequency
-                                        //  {
-                                        //     num feq[num]
-                                        //     5: 1 
-                                        //     2: 1
-                                        //     8: 1
-                                        //     1: 1
-                                        //     9: 1
-                                        //     3: 1
-                                        //     3: 1 +1 =2
-                                        //  }
-
+    let frequency = {};
     for (let i = 0; i < sorted.length; i++) {
         let num = sorted[i];
         if (frequency[num]) {
@@ -53,16 +36,26 @@ function sortNumbers() {
     }
 
     // Display results
-    document.getElementById('original').innerHTML = original; 
+    document.getElementById('original').innerHTML = original;
     document.getElementById('sorted').innerHTML = sorted;
 
 
     // Display frequency
-    let freqText = '';
+    let freq = '';
     for (let num in frequency) {
-        freqText += 'Number ' + num + ' appears ' + frequency[num] + ' times<br>';
+        freq += 'Number ' + num + ' appears ' + frequency[num] + ' times<br>';
     }
     document.getElementById('frequency').innerHTML = freqText;
     document.getElementById('result').style.display = 'block';
     // block is a CSS display value
+}
+
+
+function resetNumbers(){
+    document.getElementById('numberInput').value = "";
+    document.getElementById('original').innerHTML = "";
+    document.getElementById('sorted').innerHTML = "";
+    document.getElementById('frequency').innerHTML = "";
+    document.getElementById('result').style.display = 'none';
+    
 }
