@@ -1,12 +1,14 @@
 function sortNumbers() {
     let input = document.getElementById('numberInput').value.trim(); // 5 6 7 8 9 -> string
 
-    let numbers = input.split(' '); // Convert input string to array of numbers // [5,6,7,8,9]
+    let numbers = input.split(/\s+/); // Convert input string to array of numbers // [5,6,7,8,9]
     let numArray = []; // so that i can convert the string into integers
 
     for (let i = 0; i < numbers.length; i++) {
         numArray.push(parseInt(numbers[i])); //appending one by one 5 6 7 8 9
     }
+
+    
 
     // Store original numbers
     let original = [...numArray]; // Creates a copy of the array so original order is preserved.
