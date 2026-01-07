@@ -1,6 +1,12 @@
 function sortNumbers() {
     let input = document.getElementById('numberInput').value.trim(); // 5 6 7 8 9 -> string
 
+     if(input === ""){
+        alert("Please enter the numbers")
+        return;
+    }
+
+
     let numbers = input.split(/\s+/); // Convert input string to array of numbers // [5,6,7,8,9]
 
 /*
