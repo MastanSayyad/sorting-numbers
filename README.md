@@ -21,6 +21,22 @@ This project demonstrates basic **sorting algorithms**, **DOM manipulation**, an
 - Shows frequency of each number
 - Reset functionality
 
+
+## Project Structure
+
+```
+project-folder/
+│
+├── index.html
+├── style.css
+├── js-functions.js
+├── bubble-sort.js
+├── quick-sort.js
+├── selection-sort.js
+├── insertion-sort.js
+└── README.md
+```
+
 ## Technologies Used
 - HTML5
 - CSS3
@@ -38,20 +54,6 @@ E --> F[Deployment]
 F --> G[Maintenance]
 ```
 
-## Project Structure
-
-```
-project-folder/
-│
-├── index.html
-├── style.css
-├── js-functions.js
-├── bubble-sort.js
-├── quick-sort.js
-├── selection-sort.js
-├── insertion-sort.js
-└── README.md
-```
 
 ### USE Case Diagram
 
