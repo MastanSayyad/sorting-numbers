@@ -45,7 +45,7 @@ function sortNumbers() {
     for (let num in frequency) {
         freq += 'Number ' + num + ' appears ' + frequency[num] + ' times<br>';
     }
-    document.getElementById('frequency').innerHTML = freqText;
+    document.getElementById('frequency').innerHTML = freq;
     document.getElementById('result').style.display = 'block';
     // block is a CSS display value
 }
