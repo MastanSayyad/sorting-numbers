@@ -42,9 +42,17 @@ project-folder/
 └── README.md
 ```
 
-## USE Case Diagram
+### USE Case Diagram
 
+<img width="1339" height="307" alt="image" src="https://github.com/user-attachments/assets/ef1c6d95-4171-4b65-8412-68ecab8e87f5" />
 
+### Activity Diagram
+
+<img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/7f8de965-91ed-4454-97b7-5dc1a0ce5c97" />
+
+### Sequence Diagram
+
+<img width="1390" height="841" alt="image" src="https://github.com/user-attachments/assets/04cad625-0af8-4a16-a0f0-dab9c1eba9d6" />
 
 
 ## How It Works
@@ -62,3 +70,5 @@ project-folder/
 2. Open `index.html` in any modern web browser.
 3. Enter numbers and click **Sort Numbers**.
 
+
+### Thank you for Visiting..
