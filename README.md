@@ -26,6 +26,17 @@ This project demonstrates basic **sorting algorithms**, **DOM manipulation**, an
 - CSS3
 - JavaScript (ES6)
 
+### SDLC
+
+```mermaid
+flowchart TD
+A[Requirement Analysis] --> B[Planning]
+B --> C[Design]
+C --> D[Development]
+D --> E[Testing]
+E --> F[Deployment]
+F --> G[Maintenance]
+```
 
 ## Project Structure
 
@@ -53,6 +64,8 @@ project-folder/
 ### Sequence Diagram
 
 <img width="1390" height="841" alt="image" src="https://github.com/user-attachments/assets/04cad625-0af8-4a16-a0f0-dab9c1eba9d6" />
+
+
 
 
 ## How It Works
