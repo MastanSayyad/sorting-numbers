@@ -2,6 +2,16 @@ function sortNumbers() {
     let input = document.getElementById('numberInput').value.trim(); // 5 6 7 8 9 -> string
 
     let numbers = input.split(/\s+/); // Convert input string to array of numbers // [5,6,7,8,9]
+
+/*
+\s → matches any whitespace
+    space " "
+    multiple spaces
+    tabs
+    new lines
+   + → one or more whitespace characters
+*/
+    
     let numArray = []; // so that i can convert the string into integers
 
     for (let i = 0; i < numbers.length; i++) {
